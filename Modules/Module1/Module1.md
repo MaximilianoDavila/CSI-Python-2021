@@ -189,7 +189,7 @@ You may update both simultaneously from Visual Studio by selecting.
 
 What is the difference between Git and GitHub?
 
- - Answer:
+ - Answer: Github is a repository.
 
 What is the difference between a git commit and a git push?
 
