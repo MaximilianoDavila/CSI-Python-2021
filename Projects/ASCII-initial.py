@@ -1,0 +1,6 @@
+print('     M            M           A        X   X   IIIIII')
+print('    M  M         M M         A A        X X      II ')
+print('   M    M      M    M       A   A        X       II')
+print('  M      M   M       M     AAAAAAA     X   X     II')
+print(' M         M          M   A       A   X     X    II')
+print('M                      M A         A X       X IIIIII')
