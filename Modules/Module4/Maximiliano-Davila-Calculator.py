@@ -9,11 +9,12 @@
 
 print("Area of a Circle")
 
-print("    00000000")
-print("   0        0")
-print('  0          0')
-print(" 0            0")
-print(" 0            0")
-print('  0          0')
-print('   0        0')
-
+print("     0000")
+print("   0      0")
+print(' 0          0')
+print("0            0")
+print("0            0")
+print('0            0')
+print(' 0          0')
+print("   0      0")
+print("     0000")
