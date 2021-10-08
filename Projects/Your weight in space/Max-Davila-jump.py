@@ -4,7 +4,7 @@ rel_gravity = [2.65, 1.11, 2.64, 0.40, 0.94, 1.19, 0.88]
 print("small step for space and a big step on other planets")
 myjump = float(input("What is your jump's lenght on Earth(meter)? "))
 
-myplanets = input(f"Select a planet from the list: {planet}")
+myplanets = input(f"Select a planet from the list: {planet}\n")
 def Calculatejump(planets, meter):
     print(f"your jump in Earth is: {meter}")
 
