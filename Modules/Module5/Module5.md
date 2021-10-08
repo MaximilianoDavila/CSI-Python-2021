@@ -82,8 +82,30 @@ Give a python example for each logic operator in the module image.
 
  - Answers:
    - OR:
+python = 10000
+max = -1
+computer = 1000000000
+if(max < python or max < computer):
+    print("The first one is true but the second one is cap")
+else:
+    print("Computers do not lie while in our system we fo not have feelings")
+
    - AND: 
+Salvatore = 1000
+Peter = 100
+Jose = 10000
+if (Salvatore > Peter and Peter < Jose):
+    print("Savatore is stronger than Peter but not Stronger than Jose")
+else:
+    print(" Well thats a lie and we know it")
    - NOT: 
+Superman = 100000000000
+Batman = 100
+Wonderwoman = 1000000
+if not (Superman < Batman):
+    print("That is not true boy have you seen batman vs superman")
+else:
+    print("well can't argue")
 
 
 Type down any class notes below this sentence:
