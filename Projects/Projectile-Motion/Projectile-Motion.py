@@ -67,7 +67,7 @@ myOutputfilepath = os.path.join(myOutputpath, 'Projectile-Motion.json')
 
 print(myOutputpath)
 
-with open(myOutputpath, 'w') as outfile:
+with open(myOutputfilepath, 'w') as outfile:
     json.dump([data.__dict__ for data in myDataset], outfile)
 
  # Deserialization
