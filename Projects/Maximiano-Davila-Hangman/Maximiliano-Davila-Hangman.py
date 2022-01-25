@@ -11,8 +11,8 @@ def play(word):
     guessed_letters = []
     guessed_words = []
     tries = 6
-    print("let's play hangman")
-    print("theme: taino words")
+    print("let's play Hangman, everybody's favorite game and the most that requires you being intellectual.")
+    print("theme: Taino words")
     print(display_hangman(tries))
     print(word_completion)
     print("\n")
@@ -20,9 +20,9 @@ def play(word):
         guess = input("guess a letter or word").upper()
         if len(guess) == 1 and guess.isalpha():
             if guess in guessed_letters:
-                print("already tried", guess, "!")
+                print("that word is already tried, pick another", guess, "!")
             elif guess not in word:
-                print("Isn't in the word :)")
+                print("Isn't in the word :(, I believe in you still.")
                 tries -= 1
                 guessed_letters.append(guess)
 
@@ -30,5 +30,65 @@ def play(word):
 def display_hangman(tries):
     stages = [ """
                     -------- 
-                    |
-    ]
+                    |    |   
+                    |    0
+                    |   /|\\
+                    |    |
+                    |   / \\
+                    -
+                    """,
+                    """
+                    -------- 
+                    |    |   
+                    |    0
+                    |   /|\\
+                    |    |
+                    |   / 
+                    -
+                    """,
+                    """
+                    -------- 
+                    |    |   
+                    |    0
+                    |   /|\\
+                    |    |
+                    |    
+                    -
+                    """,
+                    """
+                    -------- 
+                    |    |   
+                    |    0
+                    |   /|
+                    |    |
+                    |    
+                    -
+                    """,
+                    """
+                    -------- 
+                    |    |   
+                    |    0
+                    |    |
+                    |    |
+                    |    
+                    -
+                    """,
+                    """
+                    -------- 
+                    |    |   
+                    |    0
+                    |    
+                    |    
+                    |    
+                    -
+                    """,
+                    """
+                    -------- 
+                    |    |   
+                    |    
+                    |    
+                    |    
+                    |    
+                    -
+                    """,
+]
