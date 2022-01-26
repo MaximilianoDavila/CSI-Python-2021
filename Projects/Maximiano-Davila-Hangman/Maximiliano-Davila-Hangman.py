@@ -1,5 +1,5 @@
 import random
-word_list = ["areyto", "batata", "batea", "barbacoa", "arepas", "batu", "bohique", "boriken", "huracan", "arepa"]
+word_list = ["areyto", "batata", "batea", "barbacoa", "arepas", "batu", "bohique", "boriken", "huracán", "arepa"]
 
 def get_word(word_list):
     word = random.choice(word_list)
