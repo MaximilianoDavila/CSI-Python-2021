@@ -22,11 +22,16 @@ game_over=False
 
 
 snake_block = 10
-snake_speed = 30
+snake_speed = 100
 
 clock = pygame.time.Clock()
 
 font_style = pygame.font.SysFont(None,30)
+score_font = pygame.font.SysFont(None,30)
+
+def our_snake(snake_block, snake_list):
+    for x in snake_list:
+        pygame.draw.rect(dis, blue, [x[0], x[1], snake_block, snake_block])
 
 def message(mg, color):
     meg = font_style.render(mg, True, color)
@@ -41,6 +46,9 @@ def GameRestart():
 
     x1_change = 0
     y1_change = 0
+
+    snake_list =[]
+    lenth_of_snake = 1
 
     foodx = round(random.randrange(0, dis_width - snake_block) / 10) *10
     foody = round(random.randrange(0, dis_width - snake_block) / 10) *10
@@ -84,10 +92,29 @@ def GameRestart():
         x1 += x1_change
         y1 += y1_change
         dis.fill(yellow)
-        pygame.draw.rect(dis, black, [foodx, foody, snake_block, snake_block]) # crea el snake y lo ubica en la pantalla
-        pygame.draw.rect(dis, blue, [x1, y1, snake_block, snake_block])
+        pygame.draw.rect(dis, red, [foodx, foody, snake_block, snake_block]) # crea el food
+       # pygame.draw.rect(dis, blue, [x1, y1, snake_block, snake_block]) 3 crea el snake y lo ubica en la pantalla
+        snake_Head = []
+        snake_Head.append(x1)
+        snake_Head.append(y1)
+        snake_list.append(snake_Head)
+        if len(snake_list) > lenth_of_snake:
+            del snake_list[0]
+
+        for x in snake_list[:-1]:
+            if x  == snake_Head:
+                game_close = True
+
+        our_snake(snake_block, snake_list)
+
         pygame.display.update()
 
+
+        clock.tick(snake_speed)
+        if x1 == foodx and y1 == foody:
+            foodx = round(random.randrange(0, dis_width - snake_block) / 10) *10
+            foody = round(random.randrange(0, dis_width - snake_block) / 10) *10
+            lenth_of_snake += 1
 
         clock.tick(snake_speed)
 
