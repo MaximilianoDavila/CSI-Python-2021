@@ -1,5 +1,6 @@
 import re
 import bs4
+from bs4 import BeautifulSoup
 import requests
 
 website = 'https://xkcd.com'
